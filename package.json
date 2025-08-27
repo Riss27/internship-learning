@@ -1,20 +1,16 @@
 {
-  "name": "day1-express-basic",
+  "name": "magang",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
-    "mysql2": "^3.14.3",
-    "sequelize": "^6.37.7"
-  },
-  "devDependencies": {
     "nodemon": "^3.1.10"
   }
 }
