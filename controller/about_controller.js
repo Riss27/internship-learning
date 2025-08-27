@@ -1,4 +1,4 @@
-const { post } = require("../routing/about_route");
+const { post } = require("../routes/about_route");
 
 const aboutController = {
   getAboutPage: (req, res) => {
