@@ -1,18 +1,18 @@
-let mysql = require("mysql");
+// config/database.js
+const { Sequelize } = require('sequelize');
 
-let connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "db_express_api",
+const sequelize = new Sequelize('db_express_api', 'root', '', {
+  host: 'localhost',
+  dialect: 'mysql'
 });
 
-connection.connect(function (error) {
-  if (!!error) {
-    console.log(error);
-  } else {
-    console.log("Connection Succuessfully!");
+(async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
   }
-});
+})();
 
-module.exports = connection;
+module.exports = sequelize;
